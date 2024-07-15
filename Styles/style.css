@@ -40,6 +40,12 @@ main>section{
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
+.section-title{
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: #131313;
+    margin-bottom: 24px;
+}
 
 .navbar{
     display: flex;
@@ -110,14 +116,49 @@ main>section{
     font-size: 2.9rem;
     font-weight: 500;
 }
-.off-our-title{
-    color: #FF900E;
+.features-title2{
+    font-weight: 700;
 }
-
 .features-title-style{
     color: #FF900E;
     margin-bottom: 1.5rem;
 }
+#quick-list-style{
+    font-weight: 500;
+}
+/* some facts */
+
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.fact-card{
+   border: 1px solid #FF900E;
+   padding: 45px 40px 60px 45px;
+   width: 240px;
+   height: 240px;
+   border-radius: 8px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.fact-description{
+    margin-top: 24px;
+    max-width: 540px;
+}
+
 /* responsive media query */
 @media screen and (max-width: 576px) {
     .banner-img{
@@ -126,4 +167,26 @@ main>section{
     .navbar{
         flex-direction: column;
     }
+    .teams-section{
+        flex-direction: column;
+    }
+    .teams-img-container{
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0 auto;
+    }
+    .features-container{
+        margin-left: 25px;
+    }
+    .fact-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+   .teams-section{
+    flex-direction: column;
+   }
+   .features-container{
+    margin: 20px auto;
+   }
 }
